@@ -1,0 +1,14 @@
+#Git Ignore
+
+#Ignore logs
+*.log
+
+#Ignore binaries, obj files
+bin/
+obj/
+
+#Ignore executables
+*.exe
+
+#Ignore .vs stuff
+.vs/
