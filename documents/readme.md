@@ -50,4 +50,4 @@ This project aims to deliver a simple inventory management system (SIMS) that al
 - Data Persistence
 
 ### Diagrams
-![project design diagram](./assets/project-design-diagram.png)
+![project design diagram](./assets/Overview.svg)
