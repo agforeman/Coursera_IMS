@@ -34,13 +34,26 @@ This project aims to deliver a simple inventory management system (SIMS) that al
 --------------------------
 
 ## Objectives
+### Design
+- System overview and functional flow defined by EOD 4/23.
+- Code diagram drafts completed by EOD 4/23.
 ### Product Catalog
-- Product CRUD operations complete within 1 hour.
-- Product Catalog display functionality complete within 2 hours.
-- Error handling for invalid input complete within 4 hours.
+- Implementation of Product CRUD operations complete by 4/24.
+- Product Catalog implementation complete by 4/24.
 
 ### Data Persistence
-- Implement basic file-based storage for product data complete within 5 hours.
+- Implementation of basic file-based storage for product data complete by 4/25.
+
+### Testing and Bug Fixes
+- User testing complete by 4/25.
+- All defects documented and fixed by 4/25.
+
+### Final Documentation
+- All user flows diagrams updated, as needed, by 4/26.
+- All class diagrams finalized and updated, as needed, by 4/26.
+
+### Deliverables
+- MVP delivered by 4/26.
 
 ---------------------------
 ## Design Outline
@@ -50,4 +63,28 @@ This project aims to deliver a simple inventory management system (SIMS) that al
 - Data Persistence
 
 ### Diagrams
-![project design diagram](./assets/Overview.svg)
+##### User Flows
+###### System Overview
+The following diagram shows the high level user flow of the program.
+![Overall system flow diagram](./assets/Overview.svg)
+
+###### Add Product
+The following diagram shows the high level user flow of the add program logic.
+![Add product flow diagram](./assets/AddProduct.svg)
+###### Update Product
+The following diagram shows the high level user flow of the update product logic.
+![Update product flow diagram](./assets/UpdateProduct.svg)
+###### Remove Product
+The following diagram shows the high level user flow for the remove product logic.
+![Remove product flow diagram](./assets/RemoveProduct.svg)
+###### Display Catalogue
+The following diagram shows the high level user flow for the display catalog logic.
+![Display catalog flow diagram](./assets/DisplayCatalog.svg)
+
+#### Class Diagrams
+##### Products
+![Product UML](./assets/ProductUML.svg)
+##### Catalogue
+![Catalogue UML](./assets/CatalogUML.svg)
+##### Persistor
+![Persistor UML](./assets/PersistorUML.svg)
