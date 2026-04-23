@@ -12,3 +12,6 @@ obj/
 
 #Ignore .vs stuff
 .vs/
+*.slnx
+*.cproj
+*.csproj
