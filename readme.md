@@ -1,7 +1,7 @@
 # Project Overview
 ------------
 ## Project Title
-==Project SIMS==[^1] - Simple Inventory Management System
+Project SIMS[^1] - Simple Inventory Management System
 
 [^1]: No affiliation with the sims game series. The name is purely coincidental and chosen for its simplicity and relevance to the project's purpose.
 
