@@ -16,8 +16,5 @@ namespace IMS
          Name = name;
          Price = price;
       }
-
-      // Display
-      public override string ToString() => $"Name: {Name}, Price: {Price:C}";
    }
 }
