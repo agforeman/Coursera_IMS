@@ -2,11 +2,12 @@ using System;
 
 namespace IMS
 {
-   class Program
+   class IMS
    { 
-      public static void Main()
+      public static void Main(string[] args)
       {
-         Console.WriteLine("Hello World!");
+         var test = new Product("Product 1", 100.43);
+         Console.WriteLine(test);
       }
    }
 }
