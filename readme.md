@@ -28,7 +28,6 @@ This project aims to deliver a simple inventory management system (SIMS) that al
 ### Non-Functional
 - The system shall allow at most 20 products in the catalogue.
 - The system shall provide simple storage capabilities to persist product data between sessions.
-- The system shall process user input within 500 ms.
 - The system shall display error messages for invalid input and allow the user to retry the operation.
 
 --------------------------

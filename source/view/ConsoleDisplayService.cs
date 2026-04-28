@@ -12,7 +12,7 @@ namespace IMS.views
          Console.WriteLine("Product Catalog:");
          foreach (var listing in catalog)
          {
-            Console.WriteLine($"- {listing.Product.Name}: ${listing.Product.Price} (Stock: {listing.Quantity})");
+            Console.WriteLine($"- {listing.Product.Name}: ${listing.Product.Price:C2} (Stock: {listing.Quantity})");
          }
       }
 
@@ -25,6 +25,13 @@ namespace IMS.views
       public void DisplayMessage(string message)
       {
          Console.WriteLine(message);
+      }
+
+      public void DisplaySuccess(string successMessage)
+      {
+         Console.ForegroundColor = ConsoleColor.Green;
+         Console.WriteLine(successMessage);
+         Console.ResetColor();
       }
 
       public void DisplayError(string errorMessage)
