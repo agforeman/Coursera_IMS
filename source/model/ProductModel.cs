@@ -13,7 +13,7 @@ namespace IMS.models
       /// <summary>
       /// The price of the product.
       /// </summary>
-      public double Price {get; set;}
+      public decimal Price {get; set;}
 
       /// <summary>
       /// Initializes a new instance of the <see cref="Product"/> struct.
@@ -21,7 +21,7 @@ namespace IMS.models
       /// <param name="name">The name of the product.</param>
       /// <param name="price">The price of the product.</param>
       /// </summary>
-      public Product(string name, double price)
+      public Product(string name, decimal price)
       {
          // Todo: Add class invariant checks
          Name = name;
