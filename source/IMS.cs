@@ -4,6 +4,10 @@ namespace IMS.source
    { 
       public static void Main()
       {
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
       }
    }
 }
