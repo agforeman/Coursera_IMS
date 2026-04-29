@@ -32,10 +32,21 @@ namespace IMS.views
       void DisplayError(string errorMessage);
       
       /// <summary>
+      /// Displays a success message to the user.
+      /// </summary>
+      /// <param name="successMessage">The success message to display.</param>
+      void DisplaySuccess(string successMessage);
+
+      /// <summary>
       /// Displays a menu to the user.
       /// </summary>
       /// <param name="options">The options to display.</param>
       void DisplayMenu(string[] options);
+
+      /// <summary>
+      /// Clears the display.
+      /// </summary>
+      void Clear();
    }
    
 }

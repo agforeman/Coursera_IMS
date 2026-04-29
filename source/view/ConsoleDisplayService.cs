@@ -5,14 +5,27 @@ namespace IMS.views
    /// <summary>
    /// This class implements the <see cref="IDisplayService"/> interface and is responsible for displaying the product catalog and related information to the user in the console.
    /// </summary>
-   public class ConsoleDisplayService : IDisplayService
+   public class ConsoleDisplayService() : IDisplayService
    {
+      private static readonly bool WAITFORINPUTDEFAULT = true;
+      
+      private readonly bool waitForInput = WAITFORINPUTDEFAULT;
+
+      public ConsoleDisplayService(bool waitForInputOverride) : this()
+      {
+         waitForInput = waitForInputOverride;
+      }
+
       public void DisplayCatalog(IEnumerable<ProductListing> catalog)
       {
          Console.WriteLine("Product Catalog:");
-         foreach (var listing in catalog)
+         foreach( var listing in catalog )
          {
             Console.WriteLine($"- {listing.Product.Name}: ${listing.Product.Price:C2} (Stock: {listing.Quantity})");
+         }
+         if( waitForInput )
+         {
+            PromptForContinue();
          }
       }
 
@@ -20,34 +33,59 @@ namespace IMS.views
       {
          Console.WriteLine($"Product: {product.Name}");
          Console.WriteLine($"Price: ${product.Price}");
+         if( waitForInput )
+         {
+            PromptForContinue();
+         }
       }
 
       public void DisplayMessage(string message)
       {
          Console.WriteLine(message);
+         if( waitForInput )
+         {
+            PromptForContinue();
+         }
+
       }
 
       public void DisplaySuccess(string successMessage)
       {
          Console.ForegroundColor = ConsoleColor.Green;
-         Console.WriteLine(successMessage);
+         DisplayMessage(successMessage);
          Console.ResetColor();
       }
 
       public void DisplayError(string errorMessage)
       {
          Console.ForegroundColor = ConsoleColor.Red;
-         Console.WriteLine($"Error: {errorMessage}");
+         DisplayMessage(errorMessage);
          Console.ResetColor();
       }
 
       public void DisplayMenu(string[] options)
       {
          Console.WriteLine("Menu:");
-         for (int i = 0; i < options.Length; i++)
+         for( int i = 0; i < options.Length; i++ )
          {
             Console.WriteLine($"{i + 1}. {options[i]}");
          }
+         if( waitForInput )
+         {
+            PromptForContinue();
+         }
+
+      }
+
+      public void Clear()
+      {
+         Console.Clear();
+      }
+
+      private void PromptForContinue()
+      {
+         DisplayMessage("Press any key to continue...");
+         Console.ReadKey(intercept: true);
       }
    }
 }
