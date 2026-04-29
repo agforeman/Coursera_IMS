@@ -1,4 +1,3 @@
-using System.Reflection;
 using IMS.controllers;
 using IMS.views;
 
@@ -36,7 +35,7 @@ namespace IMS.source
                case "remove" or "remove product" or "3":
                   //RemoveProductFromCatalog();
                   break;
-                  
+
                case "update" or "update product" or "4":
                   //UpdateProduct
                   break;
@@ -54,5 +53,5 @@ namespace IMS.source
             }
          } while (!exit);
       }
-   } 
+   }
 }
