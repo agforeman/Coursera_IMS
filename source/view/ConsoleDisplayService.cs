@@ -70,16 +70,11 @@ namespace IMS.views
          {
             Console.WriteLine($"{i + 1}. {options[i]}");
          }
-         if( waitForInput )
-         {
-            PromptForContinue();
-         }
-
       }
 
       public void Clear()
       {
-         Console.Clear();
+         //Console.Clear();
       }
 
       private void PromptForContinue()
